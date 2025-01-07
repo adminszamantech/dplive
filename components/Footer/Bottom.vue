@@ -2,7 +2,7 @@
     <div class="footer-bottom bg-[#07254b]">
        
         <div class="footer-copyright text-center py-3">
-            <p class="copyright text-[#ffffff] text-[14px]">&copy; ২০২৪ সর্বস্বত্ব সংরক্ষিত | ঢাকাপ্রকাশ</p>
+            <p class="copyright text-[#ffffff] text-[14px]">&copy; ২০২৫ সর্বস্বত্ব সংরক্ষিত | ঢাকাপ্রকাশ</p>
         </div>
     </div>
 </template>
