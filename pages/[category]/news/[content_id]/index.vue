@@ -70,11 +70,11 @@
                         <div class="singlePost-heading flex flex-col gap-2 solaimanlipi">
                             <h4 v-if="detailsContent?.content_sub_heading" class="text-[20px] text-[#ff0000]">{{
         detailsContent?.content_sub_heading }}</h4>
-                            <h2 class="text-3xl md:text-[40px] md:leading-[50px] print:leading-tight print:text-[32px]">
+                            <h1 class="text-3xl md:text-[40px] md:leading-[50px] print:leading-tight print:text-[32px]">
                                 {{
         detailsContent?.content_heading }}
                                 {{ balvalue }}
-                            </h2>
+                            </h1>
                             <div class="h-2 w-12 rounded-md bg-[#3375af] print:hidden"></div>
 
                         </div>
@@ -335,10 +335,10 @@
                         <div class="singlePost-heading flex flex-col gap-2 solaimanlipi">
                             <h4 v-if="moreDetailContent?.content_sub_heading" class="text-[20px] text-[#ff0000]">{{
         moreDetailContent?.content_sub_heading }}</h4>
-                            <h2 class="text-3xl md:text-[40px] md:leading-[50px] print:leading-tight print:text-[32px]">
+                            <h1 class="text-3xl md:text-[40px] md:leading-[50px] print:leading-tight print:text-[32px]">
                                 {{
         moreDetailContent.content_heading
-    }} {{ balvalue }}</h2>
+    }} {{ balvalue }}</h1>
                             <div class="h-2 w-12 rounded-md bg-[#3375af] print:hidden"></div>
                         </div>
 
