@@ -302,13 +302,22 @@ siteblockAds.value = sbAds.value
 
 <style>
     body.dark-mode {
-        background-color: #121212;
+        background-color: #192132;
         color: #ffffff;
+    }
+
+    body.dark-mode p {
+        color: #ffffff; 
+    }
+
+    body.dark-mode a h3, 
+    body.dark-mode a h4,
+    body.dark-mode span {
+        color: #ffffff !important; 
     }
 
     /* Light Mode */
     body {
         background-color: #ffffff;
-        color: #121212;
     }
 </style>
