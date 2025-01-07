@@ -1,5 +1,5 @@
 <template>
-    <div
+    <div id="HeaderTopBar"
         :class="`${scrollDown ? 'fixed top-0 right-0 left-0 shadow-lg' : 'fixed right-0 left-0 '} z-[1] hidden md:block shadow-lg shadow-gray-300 duration-300 bg-[#3375af]`">
         <div class="max-w-[1280px] mx-auto flex gap-1 items-center justify-between px-4 dp-font">
             <ul class="flex gap-0 justify-center text-white mainmenu">

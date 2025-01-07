@@ -301,28 +301,49 @@ siteblockAds.value = sbAds.value
 </script>
 
 <style>
+
+    /* Light Mode */
+    body {
+        background-color: #ffffff;
+    }
+
+
+
+
+    /*Dark Mode */
     body.dark-mode {
         background-color: #192132;
         color: #ffffff;
     }
 
-
-    body.dark-mode #darkMode {
+    body.dark-mode #darkMode,
+    body.dark-mode .ad-section {
         background-color: #192132 !important;
     }
-
-    body.dark-mode p {
-        color: #ffffff; 
+    body.dark-mode #navBar,
+    body.dark-mode .gallery-content-except {
+        background-color: #26334d !important;
+    }
+    body.dark-mode #HeaderTopBar {
+        background-color: #26334d !important;
+        box-shadow: none !important;
+    }
+    
+    body.dark-mode ul li  {
+        background-color: #26334d !important;
+    }
+    
+    body.dark-mode p,
+    body.dark-mode svg {
+        color: #ffffff !important; 
     }
     body.dark-mode a h3, 
     body.dark-mode a h4,
     body.dark-mode span,
-    body.dark-mode a {
-
+    body.dark-mode a,
+    body.dark-mode h1,
+    body.dark-mode h2 {
         color: #ffffff !important; 
     }
-    /* Light Mode */
-    body {
-        background-color: #ffffff;
-    }
+
 </style>
