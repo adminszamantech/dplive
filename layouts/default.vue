@@ -36,7 +36,11 @@
             <HeaderTop :scrollDown="scrollDown" :LogoHeaderScollUp="LogoHeaderScollUp" />
             <!-- Mobile Header -->
             <!-- Top Header -->
-            <HeaderTopMenu :scrollDown="scrollDown" />
+            <HeaderTopMenu 
+                :scrollDown="scrollDown" 
+                :darkMode="darkMode" 
+                @toggle-dark-mode="toggleDarkMode"
+            />
 
             <!-- </div> -->
         </div>
@@ -61,6 +65,41 @@
 </template>
 
 <script setup>
+
+
+import { ref, watch } from 'vue';
+const darkMode = ref(false);
+
+watch(darkMode, (isDark) => {
+    const body = document.body;
+    if (isDark) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+const toggleDarkMode = () => {
+    darkMode.value = !darkMode.value;
+};
+
+// Initialize theme on mount
+onMounted(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        darkMode.value = true;
+    } else {
+        darkMode.value = false;
+    }
+});
+
+
+
+
+
+
 
 const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -261,4 +300,15 @@ siteblockAds.value = sbAds.value
 
 </script>
 
-<style></style>
+<style>
+    body.dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+    }
+
+    /* Light Mode */
+    body {
+        background-color: #ffffff;
+        color: #121212;
+    }
+</style>

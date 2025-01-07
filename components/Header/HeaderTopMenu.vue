@@ -24,6 +24,20 @@
                         class="py-2 px-2 block hover:bg-[#284f81] hover:border-b-2 hover:border-b-white border-b-2 border-b-transparent duration-500">
                         ভিজ্যুয়াল মিডিয়া</NuxtLink>
                 </li>
+                <li>
+                    <button @click="$emit('toggle-dark-mode')" class="dark-mode-toggle">
+                        <Icon 
+                            v-if="darkMode" 
+                            name="material-symbols:dark-mode" 
+                            class="text-xl " 
+                        />
+                        <Icon 
+                            v-else 
+                            name="material-symbols:light-mode" 
+                            class="text-xl" 
+                        />
+                    </button>
+                </li>
             </ul>
             <div @click="dkdropdownToggle"
                 :class="`${dkdropdownStatus === true && 'bg-[#124d80]'} flex gap-1 items-center justify-center text-white hover:bg-[#124d80] px-2 py-1 rounded-sm cursor-pointer`">
@@ -54,7 +68,8 @@
 <script setup>
 import { ref } from 'vue'
 import { onClickOutside } from '@vueuse/core'
-const { scrollDown } = defineProps(['scrollDown'])
+// const { scrollDown } = defineProps(['scrollDown'])
+defineProps(['darkMode', 'scrollDown']);
 
 // const headCatconfig = useRuntimeConfig()
 const headCategory = useState(() => [])
@@ -75,6 +90,9 @@ const dkdropdownToggle = () => {
     }
 }
 
+
+
+
 // const dropmenuRef = ref(null)
 // onClickOutside(
 //     dropmenuRef,
@@ -90,5 +108,14 @@ const dkdropdownToggle = () => {
 .mainmenu .router-link-active {
     background-color: #284f81;
     border-bottom: 2px solid #fff;
+}
+</style>
+<style>
+.dark-mode-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 6px;
+    padding-left: 20px;
 }
 </style>
