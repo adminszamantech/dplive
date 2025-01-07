@@ -1,0 +1,144 @@
+@import url('https://fonts.maateen.me/solaiman-lipi/font.css');
+@import url('https://fonts.maateen.me/siyam-rupali/font.css');
+@import url('https://fonts.maateen.me/kalpurush/font.css');
+@import url('https://fonts.maateen.me/adorsho-lipi/font.css');
+
+/* Siyam Rupali */
+@font-face {
+    font-family: solaimanlipi;
+    src: url('/assets/fonts/SolaimanLipi.woff') format("embedded-opentype"),url('/assets/fonts/SolaimanLipi.woff') format("woff")
+}
+
+@font-face {
+    font-family: solaimanlipi;
+    src: url('/assets/fonts/SolaimanLipi.woff2') format("woff")
+}
+
+@font-face {
+    font-family: solaimanlipi;
+    src: url('/assets/fonts/SolaimanLipi.ttf') format("truetype")
+}
+
+@font-face {
+    font-family: solaimanlipi;
+    src: url('/assets/fonts/SolaimanLipi.svg') format("svg")
+}
+
+
+@font-face {
+    font-family: DhakaRegular;
+    src: url('/assets/fonts/Dhakaprokash-Regular-v1.woff2');
+}
+@font-face {
+    font-family: SiyamLipi;
+    src: url('/assets/fonts/DP-Font.woff');
+}
+
+@font-face {
+    font-family: NewsReader;
+    src: url('/assets/fonts/newsreader-Regular.ttf');
+}
+
+.solaimanlipi {
+    font-family: solaimanlipi !important
+}
+
+
+body {
+    font-family: 'solaimanlipi' !important;
+    color: #333
+}
+.siyamLipiFont {
+    font-family: SiyamLipi;
+}
+
+.dp-font{
+    font-family: DhakaRegular !important;
+}
+
+
+.postdetails iframe {
+    /* width: 100% !important; */
+    margin-top: 20px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+figure.image {
+    margin: 18px 0px !important;
+}
+figure.image img {
+    cursor: zoom-in;
+}
+.lead-img {
+    cursor: zoom-in;
+}
+figure.image figcaption {
+    border-bottom: 1px solid #ddd !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    text-align: center !important;
+    font-size: 14px !important;
+}
+
+.singlePost-details .postdetails p a {
+    /*display: block;*/
+    white-space: pre-wrap !important;
+    /* css-3 */
+    white-space: -moz-pre-wrap !important;
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap !important;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap !important;
+    /* Opera 7 */
+    word-wrap: break-word !important;
+    /* Internet Explorer 5.5+ */
+}
+
+.st-cmp-settings {
+    display: none !important;
+}
+
+.postdetails p img {
+    margin: 18px 0px !important;
+    cursor: zoom-in;
+}
+.postdetails p {
+    margin-bottom: 12px;
+}
+.mainmenu {
+    font-size: 18px;
+}
+@media all and (max-width: 600px){
+    .postdetails iframe {
+        width: 100% !important;
+    }
+}
+
+@media all and (max-width:340px){
+    p.img-title {
+        font-size: 14px !important;
+    }
+}
+
+/* ::-webkit-scrollbar {
+    width: 10px;
+} */
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+    background: #ddd;
+} */
+
+/* Handle */
+/* ::-webkit-scrollbar-thumb { */
+/* background: #c9c3c3; */
+/* background: #6facf1;
+    border-radius: 4px; */
+/* } */
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+    background: #bdb8b8;
+} */

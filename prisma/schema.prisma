@@ -1,0 +1,587 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model authors {
+  author_id         Int       @id @default(autoincrement()) @db.UnsignedInt
+  author_type       Int       @default(1)
+  author_name       String    @db.VarChar(255)
+  author_name_bn    String    @db.VarChar(255)
+  author_slug       String    @unique(map: "authors_author_name_slug_unique") @db.VarChar(255)
+  author_initial    String    @unique(map: "authors_author_initial_unique") @db.VarChar(30)
+  author_initial_bn String    @db.VarChar(255)
+  author_bio        String?   @db.Text
+  author_bio_bn     String?   @db.Text
+  img_path          String?   @db.VarChar(255)
+  deletable         Int       @default(1) @db.UnsignedInt
+  created_at        DateTime? @db.Timestamp(0)
+  updated_at        DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model bn_ads {
+  id                 Int       @id @default(autoincrement()) @db.UnsignedInt
+  type               Int?      @default(1) @db.UnsignedInt
+  page               Int?      @db.UnsignedInt
+  position           Int?      @default(1) @db.UnsignedInt
+  dfp_header_code    String?   @db.Text
+  code               String?   @db.Text
+  desktop_image_path String?   @db.VarChar(255)
+  mobile_image_path  String?   @db.VarChar(255)
+  external_link      String?   @db.VarChar(255)
+  start_time         DateTime? @db.DateTime(0)
+  end_time           DateTime? @db.DateTime(0)
+  status             Int?      @default(1)
+  deletable          Int?      @default(1)
+  created_at         DateTime? @db.Timestamp(0)
+  updated_at         DateTime? @db.Timestamp(0)
+}
+
+model bn_breaking_news {
+  id           Int       @id @default(autoincrement()) @db.UnsignedInt
+  news_title   String?   @db.VarChar(255)
+  news_link    String?   @db.VarChar(255)
+  position     Int?
+  hours        Int?
+  user_id      Int
+  expired_time DateTime? @db.DateTime(0)
+  created_at   DateTime? @db.Timestamp(0)
+  updated_at   DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model bn_categories {
+  cat_id               Int       @id @default(autoincrement()) @db.UnsignedInt
+  cat_type             Int       @default(1)
+  cat_name             String    @db.VarChar(100)
+  cat_name_bn          String    @db.VarChar(100)
+  cat_slug             String    @db.VarChar(100)
+  cat_title            String?   @db.Text
+  cat_meta_keyword     String?   @db.VarChar(255)
+  cat_meta_description String?   @db.Text
+  cat_position         Int       @default(0)
+  top_menu             Int       @default(2)
+  footer_menu          Int       @default(2)
+  status               Int       @default(1)
+  deletable            Int       @default(1)
+  created_at           DateTime? @db.Timestamp(0)
+  updated_at           DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model bn_content_positions {
+  position_id    Int       @id @default(autoincrement()) @db.UnsignedInt
+  position_name  String    @db.VarChar(255)
+  position_slug  String    @db.VarChar(255)
+  cat_id         Int?
+  special_cat_id Int?      @db.UnsignedInt
+  subcat_id      Int?      @db.UnsignedInt
+  content_ids    String?   @db.Text
+  total_content  Int?      @db.UnsignedInt
+  status         Int       @default(1)
+  deletable      Int       @default(1)
+  created_at     DateTime? @db.Timestamp(0)
+  updated_at     DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model bn_contents {
+  content_id          Int       @id @default(autoincrement()) @db.UnsignedInt
+  content_type        Int       @default(1)
+  cat_id              Int
+  subcat_id           Int       @default(1)
+  special_cat_id      Int       @default(1)
+  country_id          Int
+  division_id         Int       @default(1)
+  district_id         Int       @default(1)
+  upozilla_id         Int
+  content_heading     String    @db.Text
+  content_sub_heading String?   @db.Text
+  author_slugs        String?   @db.VarChar(255)
+  author_name         String?   @db.VarChar(255)
+  content_brief       String?   @db.Text
+  content_details     String    @db.LongText
+  img_xs_path         String?   @db.VarChar(255)
+  img_sm_path         String?   @db.VarChar(255)
+  img_sm_caption      String?   @db.Text
+  img_bg_path         String?   @db.VarChar(255)
+  og_image            String?   @db.LongText
+  img_bg_caption      String?   @db.Text
+  related_ids         String?   @db.Text
+  photo_ids           String?   @db.VarChar(255)
+  video_type          Int?
+  video_id            String?   @db.Text
+  uploader_id         Int       @db.UnsignedInt
+  reporter_id         Int?
+  tags                String?   @db.Text
+  meta_keywords       String?   @db.Text
+  timeline_tag        String?   @db.Text
+  podcast_id          String?   @db.VarChar(255)
+  status              Int       @default(1)
+  scroll              Int       @default(1)
+  total_hit           Int       @default(0)
+  deletable           Int       @default(1)
+  created_at          DateTime? @db.Timestamp(0)
+  updated_at          DateTime? @db.Timestamp(0)
+
+  @@index([deletable], map: "deletable")
+  @@index([status], map: "status")
+  @@index([total_hit], map: "total_hit")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model bn_mobile_ads {
+  id                Int       @id @default(autoincrement()) @db.UnsignedInt
+  type              Int?      @default(1) @db.UnsignedInt
+  page              Int?      @db.UnsignedInt
+  position          Int?      @default(1) @db.UnsignedInt
+  dfp_header_code   String?   @db.Text
+  code              String?   @db.LongText
+  mobile_image_path String?   @db.VarChar(255)
+  external_link     String?   @db.VarChar(255)
+  start_time        DateTime? @db.DateTime(0)
+  end_time          DateTime? @db.DateTime(0)
+  status            Int?      @default(1)
+  deletable         Int?      @default(1)
+  created_at        DateTime? @db.Timestamp(0)
+  updated_at        DateTime? @db.Timestamp(0)
+}
+
+model bn_position_fixed {
+  id           Int       @id @default(autoincrement())
+  position_fix Int
+  created_at   DateTime? @db.Timestamp(0)
+  updated_at   DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model bn_subcategories {
+  subcat_id               Int       @id @default(autoincrement()) @db.UnsignedInt
+  cat_id                  Int
+  subcat_name             String    @db.VarChar(100)
+  subcat_name_bn          String    @db.VarChar(100)
+  subcat_slug             String    @db.VarChar(100)
+  subcat_meta_keyword     String?   @db.VarChar(255)
+  subcat_meta_description String?   @db.Text
+  subcat_position         Int       @default(0)
+  status                  Int       @default(1)
+  deletable               Int       @default(1)
+  created_at              DateTime? @db.Timestamp(0)
+  updated_at              DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model bn_tags {
+  tag_id      Int       @id @default(autoincrement()) @db.UnsignedInt
+  tag_type    Int?      @default(1)
+  tag_name    String    @unique(map: "tags_tag_name_unique") @db.VarChar(255)
+  tag_slug    String    @unique(map: "tags_tag_slug_unique") @db.VarChar(255)
+  description String?   @db.Text
+  img_path    String?   @db.VarChar(255)
+  approval    Int       @default(2)
+  deletable   Int       @default(1)
+  created_at  DateTime? @db.Timestamp(0)
+  updated_at  DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model bn_video_categories {
+  id               Int       @id @default(autoincrement()) @db.UnsignedInt
+  name             String?   @db.VarChar(255)
+  slug             String?   @db.VarChar(255)
+  name_bn          String?   @db.VarChar(255)
+  meta_keywords    String?   @db.VarChar(255)
+  meta_description String?   @db.Text
+  og_img_path      String?   @db.VarChar(255)
+  position         Int?
+  user_id          Int?
+  status           Int?      @default(1)
+  deletable        Int?      @default(1)
+  created_at       DateTime? @db.Timestamp(0)
+  updated_at       DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model bn_video_positions {
+  position_id   Int       @id @default(autoincrement()) @db.UnsignedInt
+  position_name String    @db.VarChar(255)
+  cat_id        Int?
+  subcat_id     Int?      @db.UnsignedInt
+  video_ids     String?   @db.Text
+  total_video   Int?
+  deletable     Int       @default(1)
+  created_at    DateTime? @db.Timestamp(0)
+  updated_at    DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model bn_videos {
+  id               Int       @id @default(autoincrement()) @db.UnsignedInt
+  cat_id           Int?
+  type             Int?
+  title            String?   @db.VarChar(255)
+  code             String?   @db.VarChar(255)
+  img_bg_path      String?   @db.VarChar(255)
+  img_sm_path      String?   @db.VarChar(255)
+  img_xs_path      String?   @db.VarChar(255)
+  link             String?   @db.VarChar(255)
+  meta_keywords    String?   @db.VarChar(255)
+  meta_description String?   @db.Text
+  user_id          Int?      @db.UnsignedInt
+  target           Int       @default(1) @db.UnsignedInt
+  is_live          Int       @default(0)
+  status           Int?      @default(1)
+  deletable        Int?      @default(1)
+  created_at       DateTime? @db.Timestamp(0)
+  updated_at       DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model countries {
+  country_id      Int       @id @default(autoincrement()) @db.UnsignedInt
+  country_name    String    @db.VarChar(100)
+  country_name_bn String    @db.VarChar(100)
+  country_slug    String    @db.VarChar(100)
+  deletable       Int       @default(1)
+  created_at      DateTime? @db.Timestamp(0)
+  updated_at      DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model districts {
+  district_id      Int       @id @default(autoincrement()) @db.UnsignedInt
+  division_id      Int
+  district_name    String    @db.VarChar(100)
+  district_name_bn String    @db.VarChar(100)
+  district_slug    String    @db.VarChar(100)
+  district_title   String?   @db.Text
+  meta_description String?   @db.Text
+  deletable        Int       @default(1)
+  created_at       DateTime? @db.Timestamp(0)
+  updated_at       DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model divisions {
+  division_id      Int       @id @default(autoincrement()) @db.UnsignedInt
+  division_name    String    @db.VarChar(100)
+  division_name_bn String    @db.VarChar(100)
+  division_slug    String    @db.VarChar(100)
+  deletable        Int       @default(1)
+  created_at       DateTime? @db.Timestamp(0)
+  updated_at       DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model elections {
+  id                Int       @id @default(autoincrement()) @db.UnsignedInt
+  title             String?   @db.VarChar(255)
+  total_center      Int?
+  casted_center     Int?
+  party_one_name    String?   @db.VarChar(255)
+  party_two_name    String?   @db.VarChar(255)
+  party_three_name  String?   @db.VarChar(255)
+  party_four_name   String?   @db.VarChar(255)
+  party_one_logo    String?   @db.VarChar(255)
+  party_two_logo    String?   @db.VarChar(255)
+  party_one_votes   Int?      @db.UnsignedInt
+  party_two_votes   Int?      @db.UnsignedInt
+  party_three_votes Int?      @db.UnsignedInt
+  party_four_votes  Int?      @db.UnsignedInt
+  status            Int?      @default(1)
+  deletable         Int?      @default(1)
+  created_at        DateTime? @db.Timestamp(0)
+  updated_at        DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model epaper_pages {
+  id             Int       @id @default(autoincrement()) @db.UnsignedInt
+  epaper_id      Int       @db.UnsignedInt
+  img_path       String?   @db.VarChar(255)
+  img_thumb_path String?   @db.VarChar(255)
+  img_large_path String?   @db.VarChar(255)
+  page_no        Int
+  user_id        Int       @db.UnsignedInt
+  deletable      Int?      @default(1)
+  created_at     DateTime? @db.Timestamp(0)
+  updated_at     DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model epapers {
+  id               Int       @id @default(autoincrement()) @db.UnsignedInt
+  paper_date       DateTime? @db.Date
+  total_page       Int?
+  meta_keywords    String?   @db.VarChar(255)
+  meta_description String?   @db.Text
+  og_img_path      String?   @db.VarChar(255)
+  user_id          Int?
+  status           Int?      @default(1)
+  deletable        Int?      @default(1)
+  created_at       DateTime? @db.Timestamp(0)
+  updated_at       DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model magazine_pages {
+  id             Int       @id @default(autoincrement()) @db.UnsignedInt
+  magazine_id    Int       @db.UnsignedInt
+  img_path       String?   @db.VarChar(255)
+  img_thumb_path String?   @db.VarChar(255)
+  img_large_path String?   @db.VarChar(255)
+  counter        Int
+  user_id        Int       @db.UnsignedInt
+  deletable      Int?      @default(1)
+  created_at     DateTime? @db.Timestamp(0)
+  updated_at     DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model magazines {
+  id               Int       @id @default(autoincrement()) @db.UnsignedInt
+  name             String?   @db.VarChar(255)
+  total_page       Int?
+  meta_keywords    String?   @db.VarChar(255)
+  meta_description String    @db.Text
+  og_img_path      String?   @db.VarChar(255)
+  user_id          Int?
+  status           Int?      @default(1)
+  deletable        Int?      @default(1)
+  created_at       DateTime? @db.Timestamp(0)
+  updated_at       DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model manual_documents {
+  doc_id     Int       @id @default(autoincrement()) @db.UnsignedInt
+  doc_path   String    @db.VarChar(255)
+  deletable  Int       @default(1)
+  created_at DateTime? @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model manual_photos {
+  photo_id   Int       @id @default(autoincrement()) @db.UnsignedInt
+  img_path   String    @db.VarChar(255)
+  deletable  Int       @default(1)
+  created_at DateTime? @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model mis_users {
+  user_id         Int       @id @default(autoincrement()) @db.UnsignedInt
+  user_type       Int
+  admin_id        Int?
+  dept_type       Int
+  user_name       String    @db.VarChar(255)
+  user_name_bn    String?   @db.VarChar(255)
+  user_slug       String    @db.VarChar(255)
+  user_initial    String    @db.VarChar(255)
+  user_initial_bn String?   @db.VarChar(255)
+  user_bio        String?   @db.Text
+  user_bio_bn     String?   @db.Text
+  img_path        String?   @db.VarChar(255)
+  deletable       Int       @default(1)
+  created_at      DateTime? @db.Timestamp(0)
+  updated_at      DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model monthly_folders {
+  folder_id   Int       @id @default(autoincrement()) @db.UnsignedInt
+  folder_name String    @db.VarChar(30)
+  deletable   Int       @default(1)
+  created_at  DateTime? @db.Timestamp(0)
+  updated_at  DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model p_album_positions {
+  position_id    Int       @id @default(autoincrement()) @db.UnsignedInt
+  position_name  String    @db.VarChar(255)
+  position_slug  String    @db.VarChar(255)
+  cat_id         Int?
+  special_cat_id Int?      @db.UnsignedInt
+  subcat_id      Int?      @db.UnsignedInt
+  content_ids    String?   @db.Text
+  total_content  Int?      @db.UnsignedInt
+  status         Int       @default(1)
+  deletable      Int       @default(1)
+  created_at     DateTime? @db.Timestamp(0)
+  updated_at     DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model p_albums {
+  album_id          Int       @id @default(autoincrement())
+  cat_id            Int
+  subcat_id         Int?
+  album_name        String    @db.VarChar(255)
+  short_description String?   @db.Text
+  album_details     String?   @db.Text
+  photographer_name String?   @db.VarChar(255)
+  tag               String?   @db.VarChar(255)
+  status            Int       @default(2)
+  total_hit         Int       @default(0)
+  deletable         Int       @default(1)
+  user_id           Int
+  created_at        DateTime? @db.Timestamp(0)
+  updated_at        DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model p_categories {
+  cat_id               Int       @id @default(autoincrement()) @db.UnsignedInt
+  cat_name             String    @db.VarChar(100)
+  cat_name_bn          String    @db.VarChar(100)
+  cat_slug             String    @db.VarChar(100)
+  cat_meta_keyword     String?   @db.VarChar(255)
+  cat_meta_description String?   @db.Text
+  cat_position         Int       @default(0)
+  top_menu             Int       @default(2)
+  footer_menu          Int       @default(2)
+  status               Int       @default(1)
+  deletable            Int       @default(1)
+  created_at           DateTime? @db.Timestamp(0)
+  updated_at           DateTime? @db.Timestamp(0)
+}
+
+model p_galleries {
+  id            Int       @id @default(autoincrement())
+  album_id      Int
+  photo         String    @db.Text
+  photo_capture String?   @db.Text
+  feature_image String?   @db.Text
+  created_at    DateTime? @db.Timestamp(0)
+  updated_at    DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model p_subcategories {
+  subcat_id               Int       @id @default(autoincrement()) @db.UnsignedInt
+  cat_id                  Int
+  subcat_name             String    @db.VarChar(100)
+  subcat_name_bn          String    @db.VarChar(100)
+  subcat_slug             String    @db.VarChar(100)
+  subcat_meta_keyword     String?   @db.VarChar(255)
+  subcat_meta_description String?   @db.Text
+  subcat_position         Int       @default(0)
+  status                  Int       @default(1)
+  deletable               Int       @default(1)
+  created_at              DateTime? @db.Timestamp(0)
+  updated_at              DateTime? @db.Timestamp(0)
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model password_resets {
+  email      String    @db.VarChar(255)
+  token      String    @db.VarChar(255)
+  created_at DateTime? @db.Timestamp(0)
+
+  @@index([email], map: "password_resets_email_index")
+  @@index([token], map: "password_resets_token_index")
+  @@ignore
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model site_settings {
+  id                 Int       @id @default(autoincrement())
+  site_name          String?   @db.VarChar(255)
+  favicon            String?   @db.VarChar(255)
+  logo               String?   @db.VarChar(255)
+  logo_header        Int       @default(2)
+  logo_footer        Int       @default(2)
+  title              String?   @db.Text
+  meta_keywords      String?   @db.Text
+  meta_description   String?   @db.Text
+  og_image           String?   @db.VarChar(255)
+  post_ogimage       String?   @db.VarChar(255)
+  social_links       String?   @db.Text
+  facebook           String?   @db.VarChar(255)
+  twitter            String?   @db.VarChar(255)
+  google_plus        String?   @db.VarChar(255)
+  youtube            String?   @db.VarChar(255)
+  instagram          String?   @db.VarChar(255)
+  linkedin           String?   @db.VarChar(255)
+  editor_meta        String?   @db.Text
+  address            String?   @db.Text
+  copyright          String?   @db.Text
+  show_special       Int       @default(2)
+  special_title      String?   @db.VarChar(255)
+  special_link       String?   @db.VarChar(255)
+  show_live_tv       Int       @default(2)
+  show_video_live_tv Int       @default(2)
+  created_at         DateTime? @db.Timestamp(0)
+  updated_at         DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model surveys {
+  survey_id  Int       @id @default(autoincrement())
+  title      String    @db.Text
+  from_date  DateTime? @db.Date
+  to_date    DateTime  @db.Date
+  ha         Int       @default(0)
+  na         Int       @default(0)
+  no_comment Int       @default(0)
+  status     Int       @default(1)
+  deletable  Int       @default(1)
+  created_at DateTime? @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model upozillas {
+  upozilla_id      Int       @id @default(autoincrement()) @db.UnsignedInt
+  district_id      Int
+  division_id      Int
+  upozilla_name    String    @db.VarChar(255)
+  upozilla_name_bn String    @db.VarChar(255)
+  upozilla_title   String?   @db.Text
+  upozilla_slug    String    @db.VarChar(255)
+  meta_description String?   @db.Text
+  deletable        Int       @default(1)
+  created_at       DateTime? @db.Timestamp(0)
+  updated_at       DateTime? @db.Timestamp(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model users {
+  id                        Int       @id @default(autoincrement()) @db.UnsignedInt
+  name                      String    @db.VarChar(255)
+  designation               String?   @db.VarChar(255)
+  username                  String    @db.VarChar(255)
+  email                     String    @unique(map: "admins_email_unique") @db.VarChar(255)
+  email_verified_at         DateTime? @db.Timestamp(0)
+  password                  String    @db.VarChar(255)
+  two_factor_secret         String?   @db.Text
+  two_factor_recovery_codes String?   @db.Text
+  role                      Int
+  bn_cat_ids                String?   @db.VarChar(255)
+  status                    Int       @default(1)
+  visibility                Int       @default(1)
+  deletable                 Int       @default(1)
+  remember_token            String?   @db.VarChar(100)
+  created_at                DateTime? @db.Timestamp(0)
+  updated_at                DateTime? @db.Timestamp(0)
+}
+
+model counter {
+  id           Int       @id @default(autoincrement())
+  counter_name String    @db.VarChar(255)
+  counter_time String    @db.VarChar(255)
+  time         String?   @db.VarChar(30)
+  date         String?   @db.VarChar(255)
+  status       Int?
+  created_at   DateTime? @db.Timestamp(0)
+  updated_at   DateTime? @db.Timestamp(0)
+}
