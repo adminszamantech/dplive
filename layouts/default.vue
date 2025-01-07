@@ -342,7 +342,8 @@ siteblockAds.value = sbAds.value
     body.dark-mode span,
     body.dark-mode a,
     body.dark-mode h1,
-    body.dark-mode h2 {
+    body.dark-mode h2,
+    body.dark-mode small {
         color: #ffffff !important; 
     }
     body.dark-mode .date-top-search{
