@@ -315,7 +315,7 @@ siteblockAds.value = sbAds.value
         background-color: #192132;
         color: #ffffff;
     }
-    
+
     body.dark-mode #darkMode,
     body.dark-mode .ad-section {
         background-color: #192132 !important;
@@ -337,7 +337,6 @@ siteblockAds.value = sbAds.value
     body.dark-mode svg {
         color: #ffffff !important; 
     }
-
     body.dark-mode a h3, 
     body.dark-mode a h4,
     body.dark-mode span,
@@ -346,6 +345,5 @@ siteblockAds.value = sbAds.value
     body.dark-mode h2 {
         color: #ffffff !important; 
     }
-
 
 </style>
