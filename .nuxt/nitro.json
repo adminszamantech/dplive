@@ -1,6 +1,10 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "date": "2025-01-07T06:32:46.940Z",
+=======
+  "date": "2025-01-07T09:43:59.615Z",
+>>>>>>> 6d91dbea (defalut changes)
 =======
   "date": "2025-01-07T09:43:59.615Z",
 >>>>>>> 6d91dbea (defalut changes)
@@ -14,9 +18,15 @@
   },
   "dev": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "pid": 10104,
     "workerAddress": {
       "socketPath": "\\\\.\\pipe\\nitro\\worker-10104-1.sock"
+=======
+    "pid": 336,
+    "workerAddress": {
+      "socketPath": "\\\\.\\pipe\\nitro\\worker-336-1.sock"
+>>>>>>> 6d91dbea (defalut changes)
 =======
     "pid": 336,
     "workerAddress": {
