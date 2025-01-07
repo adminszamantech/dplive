@@ -36,7 +36,7 @@
                             <img src="/assets/img/social/instagram.png" width="20" height="20" alt="instagram" />
                         </NuxtLink>
                         <NuxtLink target="_blank" :to="headerSiteSettings?.twitter">
-                            <img src="/assets/img/social/x.svg" width="20" height="20" alt="x" />
+                            <img src="/assets/img/social/x.png" width="20" height="20" alt="x" class="rounded-full" />
                         </NuxtLink>
                        
                         <NuxtLink target="_blank" :to="headerSiteSettings?.youtube">
