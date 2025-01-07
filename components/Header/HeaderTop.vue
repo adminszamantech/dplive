@@ -1,10 +1,10 @@
 <template>
-    <div class="bg-white">
+    <div class="bg-white" id="darkMode">
         <HeaderDateTop />
-        <div class="max-w-[1280px] mx-auto px-4 py-6 bg-white">
+        <div class="max-w-[1280px] mx-auto px-4 py-6 bg-white" id="darkMode">
             <div :class="` hidden md:block `">
                 <!--flex justify-between gap-10-->
-                <div class="header_logo flex justify-between gap-10">
+                <div class="header_logo flex justify-between gap-10" id="darkMode">
                     <!--<div>-->
                     <!--    <img class="mx-auto w-[350px] h-[80px]" src="https://szamantech.com/assets/img/logo-banner.gif" alt="banner"/>-->
                     <!--</div>-->
