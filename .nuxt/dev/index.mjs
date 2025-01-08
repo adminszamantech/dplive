@@ -3,29 +3,29 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { mkdirSync } from 'node:fs';
 import { parentPort, threadId } from 'node:worker_threads';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, setResponseHeader, send, getResponseStatus, setResponseStatus, setResponseHeaders, getRequestHeaders, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent, lazyEventHandler, readBody, getQuery as getQuery$1, createError, getResponseStatusText } from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/h3/dist/index.mjs';
-import adsmoment from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/moment/moment.js';
-import jimp from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/jimp/dist/index.js';
-import { PrismaClient } from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/@prisma/client/index.js';
-import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { stringify, uneval } from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/devalue/index.js';
-import { renderToString } from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/vue/server-renderer/index.mjs';
-import { renderSSRHead } from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/@unhead/ssr/dist/index.mjs';
-import { createFetch as createFetch$1, Headers as Headers$1 } from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/ofetch/dist/node.mjs';
-import destr from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/destr/dist/index.mjs';
-import { createCall, createFetch } from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/unenv/runtime/fetch/index.mjs';
-import { createHooks } from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/hookable/dist/index.mjs';
-import { snakeCase } from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/scule/dist/index.mjs';
-import { klona } from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/klona/dist/index.mjs';
-import defu, { defuFn } from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/defu/dist/defu.mjs';
-import { hash } from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/ohash/dist/index.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery } from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/ufo/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/unstorage/drivers/fs.mjs';
-import { toRouteMatcher, createRouter } from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/radix3/dist/index.mjs';
-import { version, unref } from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/vue/index.mjs';
-import { createServerHead as createServerHead$1 } from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/unhead/dist/index.mjs';
-import { defineHeadPlugin } from 'file://C:/Users/mortuza.ahmed/Desktop/dplive/node_modules/@unhead/shared/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, setResponseHeader, send, getResponseStatus, setResponseStatus, setResponseHeaders, getRequestHeaders, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent, lazyEventHandler, readBody, getQuery as getQuery$1, createError, getResponseStatusText } from 'file://D:/theme/dplive/node_modules/h3/dist/index.mjs';
+import adsmoment from 'file://D:/theme/dplive/node_modules/moment/moment.js';
+import jimp from 'file://D:/theme/dplive/node_modules/jimp/dist/index.js';
+import { PrismaClient } from 'file://D:/theme/dplive/node_modules/@prisma/client/index.js';
+import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'file://D:/theme/dplive/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { stringify, uneval } from 'file://D:/theme/dplive/node_modules/devalue/index.js';
+import { renderToString } from 'file://D:/theme/dplive/node_modules/vue/server-renderer/index.mjs';
+import { renderSSRHead } from 'file://D:/theme/dplive/node_modules/@unhead/ssr/dist/index.mjs';
+import { createFetch as createFetch$1, Headers as Headers$1 } from 'file://D:/theme/dplive/node_modules/ofetch/dist/node.mjs';
+import destr from 'file://D:/theme/dplive/node_modules/destr/dist/index.mjs';
+import { createCall, createFetch } from 'file://D:/theme/dplive/node_modules/unenv/runtime/fetch/index.mjs';
+import { createHooks } from 'file://D:/theme/dplive/node_modules/hookable/dist/index.mjs';
+import { snakeCase } from 'file://D:/theme/dplive/node_modules/scule/dist/index.mjs';
+import { klona } from 'file://D:/theme/dplive/node_modules/klona/dist/index.mjs';
+import defu, { defuFn } from 'file://D:/theme/dplive/node_modules/defu/dist/defu.mjs';
+import { hash } from 'file://D:/theme/dplive/node_modules/ohash/dist/index.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery } from 'file://D:/theme/dplive/node_modules/ufo/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://D:/theme/dplive/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://D:/theme/dplive/node_modules/unstorage/drivers/fs.mjs';
+import { toRouteMatcher, createRouter } from 'file://D:/theme/dplive/node_modules/radix3/dist/index.mjs';
+import { version, unref } from 'file://D:/theme/dplive/node_modules/vue/index.mjs';
+import { createServerHead as createServerHead$1 } from 'file://D:/theme/dplive/node_modules/unhead/dist/index.mjs';
+import { defineHeadPlugin } from 'file://D:/theme/dplive/node_modules/@unhead/shared/dist/index.mjs';
 
 const r=Object.create(null),E=e=>globalThis.process?.env||globalThis._importMeta_.env||globalThis.Deno?.env.toObject()||globalThis.__env__||(e?r:globalThis),s=new Proxy(r,{get(e,o){return E()[o]??r[o]},has(e,o){const i=E();return o in i||o in r},set(e,o,i){const g=E(!0);return g[o]=i,!0},deleteProperty(e,o){if(!o)return !1;const i=E(!0);return delete i[o],!0},ownKeys(){const e=E(!0);return Object.keys(e)}}),t=typeof process<"u"&&process.env&&"development"||"",p=[["APPVEYOR"],["AWS_AMPLIFY","AWS_APP_ID",{ci:!0}],["AZURE_PIPELINES","SYSTEM_TEAMFOUNDATIONCOLLECTIONURI"],["AZURE_STATIC","INPUT_AZURE_STATIC_WEB_APPS_API_TOKEN"],["APPCIRCLE","AC_APPCIRCLE"],["BAMBOO","bamboo_planKey"],["BITBUCKET","BITBUCKET_COMMIT"],["BITRISE","BITRISE_IO"],["BUDDY","BUDDY_WORKSPACE_ID"],["BUILDKITE"],["CIRCLE","CIRCLECI"],["CIRRUS","CIRRUS_CI"],["CLOUDFLARE_PAGES","CF_PAGES",{ci:!0}],["CODEBUILD","CODEBUILD_BUILD_ARN"],["CODEFRESH","CF_BUILD_ID"],["DRONE"],["DRONE","DRONE_BUILD_EVENT"],["DSARI"],["GITHUB_ACTIONS"],["GITLAB","GITLAB_CI"],["GITLAB","CI_MERGE_REQUEST_ID"],["GOCD","GO_PIPELINE_LABEL"],["LAYERCI"],["HUDSON","HUDSON_URL"],["JENKINS","JENKINS_URL"],["MAGNUM"],["NETLIFY"],["NETLIFY","NETLIFY_LOCAL",{ci:!1}],["NEVERCODE"],["RENDER"],["SAIL","SAILCI"],["SEMAPHORE"],["SCREWDRIVER"],["SHIPPABLE"],["SOLANO","TDDIUM"],["STRIDER"],["TEAMCITY","TEAMCITY_VERSION"],["TRAVIS"],["VERCEL","NOW_BUILDER"],["VERCEL","VERCEL",{ci:!1}],["VERCEL","VERCEL_ENV",{ci:!1}],["APPCENTER","APPCENTER_BUILD_ID"],["CODESANDBOX","CODESANDBOX_SSE",{ci:!1}],["STACKBLITZ"],["STORMKIT"],["CLEAVR"],["ZEABUR"],["CODESPHERE","CODESPHERE_APP_ID",{ci:!0}],["RAILWAY","RAILWAY_PROJECT_ID"],["RAILWAY","RAILWAY_SERVICE_ID"]];function B(){if(globalThis.process?.env)for(const e of p){const o=e[1]||e[0];if(globalThis.process?.env[o])return {name:e[0].toLowerCase(),...e[2]}}return globalThis.process?.env?.SHELL==="/bin/jsh"&&globalThis.process?.versions?.webcontainer?{name:"stackblitz",ci:!1}:{name:"",ci:!1}}const l=B(),d=l.name;function n(e){return e?e!=="false":!1}const I=globalThis.process?.platform||"",T=n(s.CI)||l.ci!==!1,R=n(globalThis.process?.stdout&&globalThis.process?.stdout.isTTY);n(s.DEBUG);const C=t==="test"||n(s.TEST);n(s.MINIMAL)||T||C||!R;const a=/^win/i.test(I);!n(s.NO_COLOR)&&(n(s.FORCE_COLOR)||(R||a)&&s.TERM!=="dumb"||T);const _=(globalThis.process?.versions?.node||"").replace(/^v/,"")||null;Number(_?.split(".")[0])||null;const W=globalThis.process||Object.create(null),c={versions:{}};new Proxy(W,{get(e,o){if(o==="env")return s;if(o in e)return e[o];if(o in c)return c[o]}});const A=globalThis.process?.release?.name==="node",L=!!globalThis.Bun||!!globalThis.process?.versions?.bun,D=!!globalThis.Deno,O=!!globalThis.fastly,S=!!globalThis.Netlify,N=!!globalThis.EdgeRuntime,u=globalThis.navigator?.userAgent==="Cloudflare-Workers",b=!!globalThis.__lagon__,F=[[S,"netlify"],[N,"edge-light"],[u,"workerd"],[O,"fastly"],[D,"deno"],[L,"bun"],[A,"node"],[b,"lagon"]];function G(){const e=F.find(o=>o[0]);if(e)return {name:e[1]}}const P=G();P?.name||"";
 
@@ -144,7 +144,7 @@ new Proxy(/* @__PURE__ */ Object.create(null), {
   }
 });
 
-const serverAssets = [{"baseName":"server","dir":"C:/Users/mortuza.ahmed/Desktop/dplive/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"D:/theme/dplive/server/assets"}];
 
 const assets = createStorage();
 
@@ -156,11 +156,11 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\mortuza.ahmed\\Desktop\\dplive","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\mortuza.ahmed\\Desktop\\dplive\\server","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Users\\mortuza.ahmed\\Desktop\\dplive\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Users\\mortuza.ahmed\\Desktop\\dplive\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\mortuza.ahmed\\Desktop\\dplive\\.data\\kv","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"D:\\theme\\dplive","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"D:\\theme\\dplive\\server","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"D:\\theme\\dplive\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"D:\\theme\\dplive\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"D:\\theme\\dplive\\.data\\kv","ignore":["**/node_modules/**","**/.git/**"]}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -670,247 +670,247 @@ const errorHandler = (async function errorhandler(error, event) {
   return send(event, html);
 });
 
-const _lazy_d3hYd0 = () => Promise.resolve().then(function () { return commonads_post$3; });
-const _lazy_9rNKwj = () => Promise.resolve().then(function () { return getauthorpost_post$3; });
-const _lazy_bJWo7U = () => Promise.resolve().then(function () { return breaking_get$3; });
-const _lazy_wDd0dW = () => Promise.resolve().then(function () { return categorycontent_post$7; });
-const _lazy_TuqzCn = () => Promise.resolve().then(function () { return latestpost_post$7; });
-const _lazy_ApfgX2 = () => Promise.resolve().then(function () { return alllatestpost_get$3; });
-const _lazy_5WMNKu = () => Promise.resolve().then(function () { return firstrightcatcontent_post$3; });
-const _lazy_RwcYfN = () => Promise.resolve().then(function () { return getinsidemorenews_post$3; });
-const _lazy_rxVClR = () => Promise.resolve().then(function () { return moredetailcontents_post$3; });
-const _lazy_qWVkiw = () => Promise.resolve().then(function () { return moreinsidemorenews_post$3; });
-const _lazy_EvGCaI = () => Promise.resolve().then(function () { return mreletedcontents_post$3; });
-const _lazy_dcQRhX = () => Promise.resolve().then(function () { return postdetail_post$3; });
-const _lazy_wQa5cB = () => Promise.resolve().then(function () { return albumcategoryphotos_post$3; });
-const _lazy_fznwoE = () => Promise.resolve().then(function () { return albumdetail_post$3; });
-const _lazy_kdW6UK = () => Promise.resolve().then(function () { return allcategory_get$3; });
-const _lazy_ucXb2U = () => Promise.resolve().then(function () { return banglatime_get$3; });
-const _lazy_660GJC = () => Promise.resolve().then(function () { return headercategory_get$3; });
-const _lazy_yHu3vt = () => Promise.resolve().then(function () { return art_get$3; });
-const _lazy_X1QLd3 = () => Promise.resolve().then(function () { return campus_get$3; });
-const _lazy_XkcNiK = () => Promise.resolve().then(function () { return career_get$3; });
-const _lazy_go9eaJ = () => Promise.resolve().then(function () { return categorycontent_post$5; });
-const _lazy_q8HpqU = () => Promise.resolve().then(function () { return child_get$3; });
-const _lazy_9QYYCV = () => Promise.resolve().then(function () { return corporate_get$3; });
-const _lazy_TO2pnt = () => Promise.resolve().then(function () { return counter_get$3; });
-const _lazy_JtAbN5 = () => Promise.resolve().then(function () { return crime_get$3; });
-const _lazy_zWAkVX = () => Promise.resolve().then(function () { return economy_get$3; });
-const _lazy_WxuWOJ = () => Promise.resolve().then(function () { return education_get$3; });
-const _lazy_3vNUiL = () => Promise.resolve().then(function () { return entertainment_get$3; });
-const _lazy_tAIzY4 = () => Promise.resolve().then(function () { return galleryphoto_get$3; });
-const _lazy_A99rbM = () => Promise.resolve().then(function () { return health_get$3; });
-const _lazy_hZcLNE = () => Promise.resolve().then(function () { return international_get$3; });
-const _lazy_4cbMYq = () => Promise.resolve().then(function () { return lawcourt_get$3; });
-const _lazy_wPj5TL = () => Promise.resolve().then(function () { return lifestyle_get$3; });
-const _lazy_VLawbm = () => Promise.resolve().then(function () { return literature_get$3; });
-const _lazy_QsH5UV = () => Promise.resolve().then(function () { return motivation_get$3; });
-const _lazy_wUDGjr = () => Promise.resolve().then(function () { return national_get$3; });
-const _lazy_TESQYT = () => Promise.resolve().then(function () { return opinion_get$3; });
-const _lazy_h6Qbxi = () => Promise.resolve().then(function () { return politics_get$3; });
-const _lazy_Dhednv = () => Promise.resolve().then(function () { return positioncontent_post$3; });
-const _lazy_RbZHQ3 = () => Promise.resolve().then(function () { return probash_get$3; });
-const _lazy_5hB5Vu = () => Promise.resolve().then(function () { return religion_get$3; });
-const _lazy_uTvnNv = () => Promise.resolve().then(function () { return saradesh_get$3; });
-const _lazy_tOVvzx = () => Promise.resolve().then(function () { return specialarticle_get$3; });
-const _lazy_sMVvfS = () => Promise.resolve().then(function () { return specialreport_get$3; });
-const _lazy_hKGHXP = () => Promise.resolve().then(function () { return specialtopcontent_get$3; });
-const _lazy_tAYdQf = () => Promise.resolve().then(function () { return sports_get$3; });
-const _lazy_RO50Pd = () => Promise.resolve().then(function () { return technology_get$3; });
-const _lazy_eyyx4T = () => Promise.resolve().then(function () { return videofeature_post$3; });
-const _lazy_QMrjc8 = () => Promise.resolve().then(function () { return ogimage_post$3; });
-const _lazy_IhXpog = () => Promise.resolve().then(function () { return search_post$3; });
-const _lazy_IK1wXI = () => Promise.resolve().then(function () { return sitesetting_get$3; });
-const _lazy_1CB1fn = () => Promise.resolve().then(function () { return subcategorycontent_post$3; });
-const _lazy_NfseeS = () => Promise.resolve().then(function () { return latestpost_post$5; });
-const _lazy_yLy0fH = () => Promise.resolve().then(function () { return popularpost_post$3; });
-const _lazy_0IaOjM = () => Promise.resolve().then(function () { return tagcontents_post$3; });
-const _lazy_w9Nisu = () => Promise.resolve().then(function () { return allvideo_get$3; });
-const _lazy_QOXnxd = () => Promise.resolve().then(function () { return categoryvideos_post$3; });
-const _lazy_aOpQ1P = () => Promise.resolve().then(function () { return singlevideo_post$3; });
-const _lazy_2R6zf1 = () => Promise.resolve().then(function () { return commonads_post$1; });
-const _lazy_L9Zgbh = () => Promise.resolve().then(function () { return getauthorpost_post$1; });
-const _lazy_4BZnm0 = () => Promise.resolve().then(function () { return breaking_get$1; });
-const _lazy_XaKhuT = () => Promise.resolve().then(function () { return categorycontent_post$3; });
-const _lazy_Ylnq88 = () => Promise.resolve().then(function () { return latestpost_post$3; });
-const _lazy_NriIRc = () => Promise.resolve().then(function () { return alllatestpost_get$1; });
-const _lazy_Hk1Y7m = () => Promise.resolve().then(function () { return firstrightcatcontent_post$1; });
-const _lazy_eh2xyc = () => Promise.resolve().then(function () { return getinsidemorenews_post$1; });
-const _lazy_kkOkN9 = () => Promise.resolve().then(function () { return moredetailcontents_post$1; });
-const _lazy_tpXSvc = () => Promise.resolve().then(function () { return moreinsidemorenews_post$1; });
-const _lazy_KO3I5i = () => Promise.resolve().then(function () { return mreletedcontents_post$1; });
-const _lazy_caGOJk = () => Promise.resolve().then(function () { return postdetail_post$1; });
-const _lazy_SBMqip = () => Promise.resolve().then(function () { return albumcategoryphotos_post$1; });
-const _lazy_jYRe3B = () => Promise.resolve().then(function () { return albumdetail_post$1; });
-const _lazy_Lmfw1H = () => Promise.resolve().then(function () { return allcategory_get$1; });
-const _lazy_3x6RWf = () => Promise.resolve().then(function () { return banglatime_get$1; });
-const _lazy_fFAOMB = () => Promise.resolve().then(function () { return headercategory_get$1; });
-const _lazy_7coNMQ = () => Promise.resolve().then(function () { return art_get$1; });
-const _lazy_NTG87X = () => Promise.resolve().then(function () { return campus_get$1; });
-const _lazy_638oCm = () => Promise.resolve().then(function () { return career_get$1; });
-const _lazy_4iMSNZ = () => Promise.resolve().then(function () { return categorycontent_post$1; });
-const _lazy_oKLuSU = () => Promise.resolve().then(function () { return child_get$1; });
-const _lazy_gdPHhM = () => Promise.resolve().then(function () { return corporate_get$1; });
-const _lazy_WXqsCP = () => Promise.resolve().then(function () { return counter_get$1; });
-const _lazy_hRmwNT = () => Promise.resolve().then(function () { return crime_get$1; });
-const _lazy_1Pq26B = () => Promise.resolve().then(function () { return economy_get$1; });
-const _lazy_mVfnL1 = () => Promise.resolve().then(function () { return education_get$1; });
-const _lazy_CSSzn5 = () => Promise.resolve().then(function () { return entertainment_get$1; });
-const _lazy_8FzAHj = () => Promise.resolve().then(function () { return galleryphoto_get$1; });
-const _lazy_F4ZMYq = () => Promise.resolve().then(function () { return health_get$1; });
-const _lazy_KD9FJW = () => Promise.resolve().then(function () { return international_get$1; });
-const _lazy_tAkOJR = () => Promise.resolve().then(function () { return lawcourt_get$1; });
-const _lazy_0BcwkP = () => Promise.resolve().then(function () { return lifestyle_get$1; });
-const _lazy_U3nb8A = () => Promise.resolve().then(function () { return literature_get$1; });
-const _lazy_3BF1c8 = () => Promise.resolve().then(function () { return motivation_get$1; });
-const _lazy_kCbpcO = () => Promise.resolve().then(function () { return national_get$1; });
-const _lazy_SvRV8A = () => Promise.resolve().then(function () { return opinion_get$1; });
-const _lazy_cubKd8 = () => Promise.resolve().then(function () { return politics_get$1; });
-const _lazy_pxiHmw = () => Promise.resolve().then(function () { return positioncontent_post$1; });
-const _lazy_XKVjZ2 = () => Promise.resolve().then(function () { return probash_get$1; });
-const _lazy_BllkiH = () => Promise.resolve().then(function () { return religion_get$1; });
-const _lazy_xNCYvO = () => Promise.resolve().then(function () { return saradesh_get$1; });
-const _lazy_cdPPSk = () => Promise.resolve().then(function () { return specialarticle_get$1; });
-const _lazy_HGfOgl = () => Promise.resolve().then(function () { return specialreport_get$1; });
-const _lazy_K8qN9t = () => Promise.resolve().then(function () { return specialtopcontent_get$1; });
-const _lazy_eDHdeb = () => Promise.resolve().then(function () { return sports_get$1; });
-const _lazy_UL3DOB = () => Promise.resolve().then(function () { return technology_get$1; });
-const _lazy_yzQOeT = () => Promise.resolve().then(function () { return videofeature_post$1; });
-const _lazy_nGOrjc = () => Promise.resolve().then(function () { return ogimage_post$1; });
-const _lazy_VEjedg = () => Promise.resolve().then(function () { return search_post$1; });
-const _lazy_5Mdj4J = () => Promise.resolve().then(function () { return sitesetting_get$1; });
-const _lazy_ac7VBl = () => Promise.resolve().then(function () { return subcategorycontent_post$1; });
-const _lazy_Un4GIw = () => Promise.resolve().then(function () { return latestpost_post$1; });
-const _lazy_LGeTKB = () => Promise.resolve().then(function () { return popularpost_post$1; });
-const _lazy_gCRt6k = () => Promise.resolve().then(function () { return tagcontents_post$1; });
-const _lazy_secmqv = () => Promise.resolve().then(function () { return allvideo_get$1; });
-const _lazy_SBH4kP = () => Promise.resolve().then(function () { return categoryvideos_post$1; });
-const _lazy_TXNGES = () => Promise.resolve().then(function () { return latestvideo_post$1; });
-const _lazy_NCeJyA = () => Promise.resolve().then(function () { return latestvideos_get$1; });
-const _lazy_Q8OfHN = () => Promise.resolve().then(function () { return singlevideo_post$1; });
-const _lazy_bzZ19k = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_zOaAtF = () => Promise.resolve().then(function () { return commonads_post$3; });
+const _lazy_IV5t7f = () => Promise.resolve().then(function () { return getauthorpost_post$3; });
+const _lazy_XS5fr8 = () => Promise.resolve().then(function () { return breaking_get$3; });
+const _lazy_f3u8le = () => Promise.resolve().then(function () { return categorycontent_post$7; });
+const _lazy_7xMCwz = () => Promise.resolve().then(function () { return latestpost_post$7; });
+const _lazy_HyX6I4 = () => Promise.resolve().then(function () { return alllatestpost_get$3; });
+const _lazy_YpNJT4 = () => Promise.resolve().then(function () { return firstrightcatcontent_post$3; });
+const _lazy_03P82S = () => Promise.resolve().then(function () { return getinsidemorenews_post$3; });
+const _lazy_gI96KC = () => Promise.resolve().then(function () { return moredetailcontents_post$3; });
+const _lazy_4DURjb = () => Promise.resolve().then(function () { return moreinsidemorenews_post$3; });
+const _lazy_R518Kh = () => Promise.resolve().then(function () { return mreletedcontents_post$3; });
+const _lazy_7kmHuj = () => Promise.resolve().then(function () { return postdetail_post$3; });
+const _lazy_pmM96S = () => Promise.resolve().then(function () { return albumcategoryphotos_post$3; });
+const _lazy_nudSwn = () => Promise.resolve().then(function () { return albumdetail_post$3; });
+const _lazy_Iyx9gc = () => Promise.resolve().then(function () { return allcategory_get$3; });
+const _lazy_iMMO25 = () => Promise.resolve().then(function () { return banglatime_get$3; });
+const _lazy_4zQqH4 = () => Promise.resolve().then(function () { return headercategory_get$3; });
+const _lazy_2DNMyh = () => Promise.resolve().then(function () { return art_get$3; });
+const _lazy_91PK7o = () => Promise.resolve().then(function () { return campus_get$3; });
+const _lazy_zU8AWg = () => Promise.resolve().then(function () { return career_get$3; });
+const _lazy_JmpoiN = () => Promise.resolve().then(function () { return categorycontent_post$5; });
+const _lazy_XnqXZw = () => Promise.resolve().then(function () { return child_get$3; });
+const _lazy_S1cYoX = () => Promise.resolve().then(function () { return corporate_get$3; });
+const _lazy_gbouOX = () => Promise.resolve().then(function () { return counter_get$3; });
+const _lazy_CxJtlA = () => Promise.resolve().then(function () { return crime_get$3; });
+const _lazy_paa5yA = () => Promise.resolve().then(function () { return economy_get$3; });
+const _lazy_ZCIJ0q = () => Promise.resolve().then(function () { return education_get$3; });
+const _lazy_yUpXvy = () => Promise.resolve().then(function () { return entertainment_get$3; });
+const _lazy_oSdM2o = () => Promise.resolve().then(function () { return galleryphoto_get$3; });
+const _lazy_YcscI3 = () => Promise.resolve().then(function () { return health_get$3; });
+const _lazy_Ia4N7m = () => Promise.resolve().then(function () { return international_get$3; });
+const _lazy_kXzK4n = () => Promise.resolve().then(function () { return lawcourt_get$3; });
+const _lazy_olfjTz = () => Promise.resolve().then(function () { return lifestyle_get$3; });
+const _lazy_8hunHo = () => Promise.resolve().then(function () { return literature_get$3; });
+const _lazy_zmqEUt = () => Promise.resolve().then(function () { return motivation_get$3; });
+const _lazy_OLdL98 = () => Promise.resolve().then(function () { return national_get$3; });
+const _lazy_TOCPeD = () => Promise.resolve().then(function () { return opinion_get$3; });
+const _lazy_vLKARi = () => Promise.resolve().then(function () { return politics_get$3; });
+const _lazy_ALGuhU = () => Promise.resolve().then(function () { return positioncontent_post$3; });
+const _lazy_D750VH = () => Promise.resolve().then(function () { return probash_get$3; });
+const _lazy_2cHMnL = () => Promise.resolve().then(function () { return religion_get$3; });
+const _lazy_lK1RoL = () => Promise.resolve().then(function () { return saradesh_get$3; });
+const _lazy_mNKUQq = () => Promise.resolve().then(function () { return specialarticle_get$3; });
+const _lazy_77Nht6 = () => Promise.resolve().then(function () { return specialreport_get$3; });
+const _lazy_zX73wo = () => Promise.resolve().then(function () { return specialtopcontent_get$3; });
+const _lazy_DPutjn = () => Promise.resolve().then(function () { return sports_get$3; });
+const _lazy_r7Gs2O = () => Promise.resolve().then(function () { return technology_get$3; });
+const _lazy_dexJjr = () => Promise.resolve().then(function () { return videofeature_post$3; });
+const _lazy_3bQJLG = () => Promise.resolve().then(function () { return ogimage_post$3; });
+const _lazy_UArCMD = () => Promise.resolve().then(function () { return search_post$3; });
+const _lazy_qwl1yl = () => Promise.resolve().then(function () { return sitesetting_get$3; });
+const _lazy_VJNikz = () => Promise.resolve().then(function () { return subcategorycontent_post$3; });
+const _lazy_hPg4LI = () => Promise.resolve().then(function () { return latestpost_post$5; });
+const _lazy_LhxTZ2 = () => Promise.resolve().then(function () { return popularpost_post$3; });
+const _lazy_HsPPL7 = () => Promise.resolve().then(function () { return tagcontents_post$3; });
+const _lazy_6O3yTT = () => Promise.resolve().then(function () { return allvideo_get$3; });
+const _lazy_X5Zc5t = () => Promise.resolve().then(function () { return categoryvideos_post$3; });
+const _lazy_485cQh = () => Promise.resolve().then(function () { return singlevideo_post$3; });
+const _lazy_vP7xla = () => Promise.resolve().then(function () { return commonads_post$1; });
+const _lazy_l6SksO = () => Promise.resolve().then(function () { return getauthorpost_post$1; });
+const _lazy_rh86JF = () => Promise.resolve().then(function () { return breaking_get$1; });
+const _lazy_kOe4SM = () => Promise.resolve().then(function () { return categorycontent_post$3; });
+const _lazy_PYqToA = () => Promise.resolve().then(function () { return latestpost_post$3; });
+const _lazy_sN0yog = () => Promise.resolve().then(function () { return alllatestpost_get$1; });
+const _lazy_uQeHIl = () => Promise.resolve().then(function () { return firstrightcatcontent_post$1; });
+const _lazy_5cnnGh = () => Promise.resolve().then(function () { return getinsidemorenews_post$1; });
+const _lazy_CMVL5X = () => Promise.resolve().then(function () { return moredetailcontents_post$1; });
+const _lazy_ta1g06 = () => Promise.resolve().then(function () { return moreinsidemorenews_post$1; });
+const _lazy_g96VNl = () => Promise.resolve().then(function () { return mreletedcontents_post$1; });
+const _lazy_npZl0j = () => Promise.resolve().then(function () { return postdetail_post$1; });
+const _lazy_4Wd1bh = () => Promise.resolve().then(function () { return albumcategoryphotos_post$1; });
+const _lazy_d4kMEV = () => Promise.resolve().then(function () { return albumdetail_post$1; });
+const _lazy_TfpSID = () => Promise.resolve().then(function () { return allcategory_get$1; });
+const _lazy_eQQ3r9 = () => Promise.resolve().then(function () { return banglatime_get$1; });
+const _lazy_iUIZPy = () => Promise.resolve().then(function () { return headercategory_get$1; });
+const _lazy_GcCzpH = () => Promise.resolve().then(function () { return art_get$1; });
+const _lazy_94p5jq = () => Promise.resolve().then(function () { return campus_get$1; });
+const _lazy_XbRsrH = () => Promise.resolve().then(function () { return career_get$1; });
+const _lazy_xjc8wA = () => Promise.resolve().then(function () { return categorycontent_post$1; });
+const _lazy_HffuFw = () => Promise.resolve().then(function () { return child_get$1; });
+const _lazy_qtyQ3G = () => Promise.resolve().then(function () { return corporate_get$1; });
+const _lazy_du47jQ = () => Promise.resolve().then(function () { return counter_get$1; });
+const _lazy_jFPkK0 = () => Promise.resolve().then(function () { return crime_get$1; });
+const _lazy_ibJIha = () => Promise.resolve().then(function () { return economy_get$1; });
+const _lazy_QyR4Uh = () => Promise.resolve().then(function () { return education_get$1; });
+const _lazy_vh3mMY = () => Promise.resolve().then(function () { return entertainment_get$1; });
+const _lazy_mzn9fp = () => Promise.resolve().then(function () { return galleryphoto_get$1; });
+const _lazy_SMhIX2 = () => Promise.resolve().then(function () { return health_get$1; });
+const _lazy_aJUYez = () => Promise.resolve().then(function () { return international_get$1; });
+const _lazy_Hzddeh = () => Promise.resolve().then(function () { return lawcourt_get$1; });
+const _lazy_FJh1hX = () => Promise.resolve().then(function () { return lifestyle_get$1; });
+const _lazy_fTvjcT = () => Promise.resolve().then(function () { return literature_get$1; });
+const _lazy_yl9Lfa = () => Promise.resolve().then(function () { return motivation_get$1; });
+const _lazy_JPpiK4 = () => Promise.resolve().then(function () { return national_get$1; });
+const _lazy_I61oGR = () => Promise.resolve().then(function () { return opinion_get$1; });
+const _lazy_LnEw0r = () => Promise.resolve().then(function () { return politics_get$1; });
+const _lazy_YQ7gdJ = () => Promise.resolve().then(function () { return positioncontent_post$1; });
+const _lazy_3o25Op = () => Promise.resolve().then(function () { return probash_get$1; });
+const _lazy_1HIgk3 = () => Promise.resolve().then(function () { return religion_get$1; });
+const _lazy_tr78fh = () => Promise.resolve().then(function () { return saradesh_get$1; });
+const _lazy_wZd9xO = () => Promise.resolve().then(function () { return specialarticle_get$1; });
+const _lazy_JF4qC3 = () => Promise.resolve().then(function () { return specialreport_get$1; });
+const _lazy_Tr3673 = () => Promise.resolve().then(function () { return specialtopcontent_get$1; });
+const _lazy_205ZkS = () => Promise.resolve().then(function () { return sports_get$1; });
+const _lazy_T3hTnf = () => Promise.resolve().then(function () { return technology_get$1; });
+const _lazy_toxEUg = () => Promise.resolve().then(function () { return videofeature_post$1; });
+const _lazy_xDNuO1 = () => Promise.resolve().then(function () { return ogimage_post$1; });
+const _lazy_5Hmbl1 = () => Promise.resolve().then(function () { return search_post$1; });
+const _lazy_5x6soJ = () => Promise.resolve().then(function () { return sitesetting_get$1; });
+const _lazy_CBd2ei = () => Promise.resolve().then(function () { return subcategorycontent_post$1; });
+const _lazy_fYP0c0 = () => Promise.resolve().then(function () { return latestpost_post$1; });
+const _lazy_aYQMYt = () => Promise.resolve().then(function () { return popularpost_post$1; });
+const _lazy_VED4XN = () => Promise.resolve().then(function () { return tagcontents_post$1; });
+const _lazy_35J76B = () => Promise.resolve().then(function () { return allvideo_get$1; });
+const _lazy_8sfDai = () => Promise.resolve().then(function () { return categoryvideos_post$1; });
+const _lazy_ozLuZc = () => Promise.resolve().then(function () { return latestvideo_post$1; });
+const _lazy_RAExFr = () => Promise.resolve().then(function () { return latestvideos_get$1; });
+const _lazy_NCkvyT = () => Promise.resolve().then(function () { return singlevideo_post$1; });
+const _lazy_cSIFZd = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '/api/prismaapi/adsmanager/commonads', handler: _lazy_d3hYd0, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/author/getauthorpost', handler: _lazy_9rNKwj, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/breakingnews/breaking', handler: _lazy_bJWo7U, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/category/categorycontent', handler: _lazy_wDd0dW, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/collection/latestpost', handler: _lazy_TuqzCn, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/detail/alllatestpost', handler: _lazy_ApfgX2, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/detail/firstrightcatcontent', handler: _lazy_5WMNKu, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/detail/getinsidemorenews', handler: _lazy_RwcYfN, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/detail/moredetailcontents', handler: _lazy_rxVClR, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/detail/moreinsidemorenews', handler: _lazy_qWVkiw, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/detail/mreletedcontents', handler: _lazy_EvGCaI, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/detail/postdetail', handler: _lazy_dcQRhX, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/gallery/albumcategoryphotos', handler: _lazy_wQa5cB, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/gallery/albumdetail', handler: _lazy_fznwoE, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/header/allcategory', handler: _lazy_kdW6UK, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/header/banglatime', handler: _lazy_ucXb2U, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/header/headercategory', handler: _lazy_660GJC, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/art', handler: _lazy_yHu3vt, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/campus', handler: _lazy_X1QLd3, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/career', handler: _lazy_XkcNiK, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/categorycontent', handler: _lazy_go9eaJ, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/home/child', handler: _lazy_q8HpqU, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/corporate', handler: _lazy_9QYYCV, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/counter', handler: _lazy_TO2pnt, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/crime', handler: _lazy_JtAbN5, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/economy', handler: _lazy_zWAkVX, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/education', handler: _lazy_WxuWOJ, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/entertainment', handler: _lazy_3vNUiL, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/galleryphoto', handler: _lazy_tAIzY4, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/health', handler: _lazy_A99rbM, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/international', handler: _lazy_hZcLNE, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/lawcourt', handler: _lazy_4cbMYq, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/lifestyle', handler: _lazy_wPj5TL, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/literature', handler: _lazy_VLawbm, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/motivation', handler: _lazy_QsH5UV, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/national', handler: _lazy_wUDGjr, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/opinion', handler: _lazy_TESQYT, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/politics', handler: _lazy_h6Qbxi, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/positioncontent', handler: _lazy_Dhednv, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/home/probash', handler: _lazy_RbZHQ3, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/religion', handler: _lazy_5hB5Vu, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/saradesh', handler: _lazy_uTvnNv, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/specialarticle', handler: _lazy_tOVvzx, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/specialreport', handler: _lazy_sMVvfS, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/specialtopcontent', handler: _lazy_hKGHXP, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/sports', handler: _lazy_tAYdQf, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/technology', handler: _lazy_RO50Pd, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/home/videofeature', handler: _lazy_eyyx4T, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/ogimage/ogimage', handler: _lazy_QMrjc8, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/search/search', handler: _lazy_IhXpog, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/sitesetting/sitesetting', handler: _lazy_IK1wXI, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/subcategory/subcategorycontent', handler: _lazy_1CB1fn, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/tabs/latestpost', handler: _lazy_NfseeS, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/tabs/popularpost', handler: _lazy_yLy0fH, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/tag/tagcontents', handler: _lazy_0IaOjM, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/video/allvideo', handler: _lazy_w9Nisu, lazy: true, middleware: false, method: "get" },
-  { route: '/api/prismaapi/video/categoryvideos', handler: _lazy_QOXnxd, lazy: true, middleware: false, method: "post" },
-  { route: '/api/prismaapi/video/singlevideo', handler: _lazy_aOpQ1P, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/adsmanager/commonads', handler: _lazy_2R6zf1, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/author/getauthorpost', handler: _lazy_L9Zgbh, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/breakingnews/breaking', handler: _lazy_4BZnm0, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/category/categorycontent', handler: _lazy_XaKhuT, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/collection/latestpost', handler: _lazy_Ylnq88, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/detail/alllatestpost', handler: _lazy_NriIRc, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/detail/firstrightcatcontent', handler: _lazy_Hk1Y7m, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/detail/getinsidemorenews', handler: _lazy_eh2xyc, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/detail/moredetailcontents', handler: _lazy_kkOkN9, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/detail/moreinsidemorenews', handler: _lazy_tpXSvc, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/detail/mreletedcontents', handler: _lazy_KO3I5i, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/detail/postdetail', handler: _lazy_caGOJk, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/gallery/albumcategoryphotos', handler: _lazy_SBMqip, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/gallery/albumdetail', handler: _lazy_jYRe3B, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/header/allcategory', handler: _lazy_Lmfw1H, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/header/banglatime', handler: _lazy_3x6RWf, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/header/headercategory', handler: _lazy_fFAOMB, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/art', handler: _lazy_7coNMQ, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/campus', handler: _lazy_NTG87X, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/career', handler: _lazy_638oCm, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/categorycontent', handler: _lazy_4iMSNZ, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/home/child', handler: _lazy_oKLuSU, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/corporate', handler: _lazy_gdPHhM, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/counter', handler: _lazy_WXqsCP, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/crime', handler: _lazy_hRmwNT, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/economy', handler: _lazy_1Pq26B, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/education', handler: _lazy_mVfnL1, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/entertainment', handler: _lazy_CSSzn5, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/galleryphoto', handler: _lazy_8FzAHj, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/health', handler: _lazy_F4ZMYq, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/international', handler: _lazy_KD9FJW, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/lawcourt', handler: _lazy_tAkOJR, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/lifestyle', handler: _lazy_0BcwkP, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/literature', handler: _lazy_U3nb8A, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/motivation', handler: _lazy_3BF1c8, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/national', handler: _lazy_kCbpcO, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/opinion', handler: _lazy_SvRV8A, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/politics', handler: _lazy_cubKd8, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/positioncontent', handler: _lazy_pxiHmw, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/home/probash', handler: _lazy_XKVjZ2, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/religion', handler: _lazy_BllkiH, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/saradesh', handler: _lazy_xNCYvO, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/specialarticle', handler: _lazy_cdPPSk, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/specialreport', handler: _lazy_HGfOgl, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/specialtopcontent', handler: _lazy_K8qN9t, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/sports', handler: _lazy_eDHdeb, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/technology', handler: _lazy_UL3DOB, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/home/videofeature', handler: _lazy_yzQOeT, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/ogimage/ogimage', handler: _lazy_nGOrjc, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/search/search', handler: _lazy_VEjedg, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/sitesetting/sitesetting', handler: _lazy_5Mdj4J, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/subcategory/subcategorycontent', handler: _lazy_ac7VBl, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/tabs/latestpost', handler: _lazy_Un4GIw, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/tabs/popularpost', handler: _lazy_LGeTKB, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/tag/tagcontents', handler: _lazy_gCRt6k, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/video/allvideo', handler: _lazy_secmqv, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/video/categoryvideos', handler: _lazy_SBH4kP, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/video/latestvideo', handler: _lazy_TXNGES, lazy: true, middleware: false, method: "post" },
-  { route: '/api/v1/video/latestvideos', handler: _lazy_NCeJyA, lazy: true, middleware: false, method: "get" },
-  { route: '/api/v1/video/singlevideo', handler: _lazy_Q8OfHN, lazy: true, middleware: false, method: "post" },
-  { route: '/__nuxt_error', handler: _lazy_bzZ19k, lazy: true, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_bzZ19k, lazy: true, middleware: false, method: undefined }
+  { route: '/api/prismaapi/adsmanager/commonads', handler: _lazy_zOaAtF, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/author/getauthorpost', handler: _lazy_IV5t7f, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/breakingnews/breaking', handler: _lazy_XS5fr8, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/category/categorycontent', handler: _lazy_f3u8le, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/collection/latestpost', handler: _lazy_7xMCwz, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/detail/alllatestpost', handler: _lazy_HyX6I4, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/detail/firstrightcatcontent', handler: _lazy_YpNJT4, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/detail/getinsidemorenews', handler: _lazy_03P82S, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/detail/moredetailcontents', handler: _lazy_gI96KC, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/detail/moreinsidemorenews', handler: _lazy_4DURjb, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/detail/mreletedcontents', handler: _lazy_R518Kh, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/detail/postdetail', handler: _lazy_7kmHuj, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/gallery/albumcategoryphotos', handler: _lazy_pmM96S, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/gallery/albumdetail', handler: _lazy_nudSwn, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/header/allcategory', handler: _lazy_Iyx9gc, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/header/banglatime', handler: _lazy_iMMO25, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/header/headercategory', handler: _lazy_4zQqH4, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/art', handler: _lazy_2DNMyh, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/campus', handler: _lazy_91PK7o, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/career', handler: _lazy_zU8AWg, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/categorycontent', handler: _lazy_JmpoiN, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/home/child', handler: _lazy_XnqXZw, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/corporate', handler: _lazy_S1cYoX, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/counter', handler: _lazy_gbouOX, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/crime', handler: _lazy_CxJtlA, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/economy', handler: _lazy_paa5yA, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/education', handler: _lazy_ZCIJ0q, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/entertainment', handler: _lazy_yUpXvy, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/galleryphoto', handler: _lazy_oSdM2o, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/health', handler: _lazy_YcscI3, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/international', handler: _lazy_Ia4N7m, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/lawcourt', handler: _lazy_kXzK4n, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/lifestyle', handler: _lazy_olfjTz, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/literature', handler: _lazy_8hunHo, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/motivation', handler: _lazy_zmqEUt, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/national', handler: _lazy_OLdL98, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/opinion', handler: _lazy_TOCPeD, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/politics', handler: _lazy_vLKARi, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/positioncontent', handler: _lazy_ALGuhU, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/home/probash', handler: _lazy_D750VH, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/religion', handler: _lazy_2cHMnL, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/saradesh', handler: _lazy_lK1RoL, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/specialarticle', handler: _lazy_mNKUQq, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/specialreport', handler: _lazy_77Nht6, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/specialtopcontent', handler: _lazy_zX73wo, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/sports', handler: _lazy_DPutjn, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/technology', handler: _lazy_r7Gs2O, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/home/videofeature', handler: _lazy_dexJjr, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/ogimage/ogimage', handler: _lazy_3bQJLG, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/search/search', handler: _lazy_UArCMD, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/sitesetting/sitesetting', handler: _lazy_qwl1yl, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/subcategory/subcategorycontent', handler: _lazy_VJNikz, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/tabs/latestpost', handler: _lazy_hPg4LI, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/tabs/popularpost', handler: _lazy_LhxTZ2, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/tag/tagcontents', handler: _lazy_HsPPL7, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/video/allvideo', handler: _lazy_6O3yTT, lazy: true, middleware: false, method: "get" },
+  { route: '/api/prismaapi/video/categoryvideos', handler: _lazy_X5Zc5t, lazy: true, middleware: false, method: "post" },
+  { route: '/api/prismaapi/video/singlevideo', handler: _lazy_485cQh, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/adsmanager/commonads', handler: _lazy_vP7xla, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/author/getauthorpost', handler: _lazy_l6SksO, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/breakingnews/breaking', handler: _lazy_rh86JF, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/category/categorycontent', handler: _lazy_kOe4SM, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/collection/latestpost', handler: _lazy_PYqToA, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/detail/alllatestpost', handler: _lazy_sN0yog, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/detail/firstrightcatcontent', handler: _lazy_uQeHIl, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/detail/getinsidemorenews', handler: _lazy_5cnnGh, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/detail/moredetailcontents', handler: _lazy_CMVL5X, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/detail/moreinsidemorenews', handler: _lazy_ta1g06, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/detail/mreletedcontents', handler: _lazy_g96VNl, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/detail/postdetail', handler: _lazy_npZl0j, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/gallery/albumcategoryphotos', handler: _lazy_4Wd1bh, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/gallery/albumdetail', handler: _lazy_d4kMEV, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/header/allcategory', handler: _lazy_TfpSID, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/header/banglatime', handler: _lazy_eQQ3r9, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/header/headercategory', handler: _lazy_iUIZPy, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/art', handler: _lazy_GcCzpH, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/campus', handler: _lazy_94p5jq, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/career', handler: _lazy_XbRsrH, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/categorycontent', handler: _lazy_xjc8wA, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/home/child', handler: _lazy_HffuFw, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/corporate', handler: _lazy_qtyQ3G, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/counter', handler: _lazy_du47jQ, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/crime', handler: _lazy_jFPkK0, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/economy', handler: _lazy_ibJIha, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/education', handler: _lazy_QyR4Uh, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/entertainment', handler: _lazy_vh3mMY, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/galleryphoto', handler: _lazy_mzn9fp, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/health', handler: _lazy_SMhIX2, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/international', handler: _lazy_aJUYez, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/lawcourt', handler: _lazy_Hzddeh, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/lifestyle', handler: _lazy_FJh1hX, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/literature', handler: _lazy_fTvjcT, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/motivation', handler: _lazy_yl9Lfa, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/national', handler: _lazy_JPpiK4, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/opinion', handler: _lazy_I61oGR, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/politics', handler: _lazy_LnEw0r, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/positioncontent', handler: _lazy_YQ7gdJ, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/home/probash', handler: _lazy_3o25Op, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/religion', handler: _lazy_1HIgk3, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/saradesh', handler: _lazy_tr78fh, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/specialarticle', handler: _lazy_wZd9xO, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/specialreport', handler: _lazy_JF4qC3, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/specialtopcontent', handler: _lazy_Tr3673, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/sports', handler: _lazy_205ZkS, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/technology', handler: _lazy_T3hTnf, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/home/videofeature', handler: _lazy_toxEUg, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/ogimage/ogimage', handler: _lazy_xDNuO1, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/search/search', handler: _lazy_5Hmbl1, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/sitesetting/sitesetting', handler: _lazy_5x6soJ, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/subcategory/subcategorycontent', handler: _lazy_CBd2ei, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/tabs/latestpost', handler: _lazy_fYP0c0, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/tabs/popularpost', handler: _lazy_aYQMYt, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/tag/tagcontents', handler: _lazy_VED4XN, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/video/allvideo', handler: _lazy_35J76B, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/video/categoryvideos', handler: _lazy_8sfDai, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/video/latestvideo', handler: _lazy_ozLuZc, lazy: true, middleware: false, method: "post" },
+  { route: '/api/v1/video/latestvideos', handler: _lazy_RAExFr, lazy: true, middleware: false, method: "get" },
+  { route: '/api/v1/video/singlevideo', handler: _lazy_NCkvyT, lazy: true, middleware: false, method: "post" },
+  { route: '/__nuxt_error', handler: _lazy_cSIFZd, lazy: true, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_cSIFZd, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
@@ -8400,8 +8400,8 @@ function publicAssetsURL(...path) {
 
 globalThis.__buildAssetsURL = buildAssetsURL;
 globalThis.__publicAssetsURL = publicAssetsURL;
-const getClientManifest = () => import('file://C:/Users/mortuza.ahmed/Desktop/dplive/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
-const getServerEntry = () => import('file://C:/Users/mortuza.ahmed/Desktop/dplive/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
+const getClientManifest = () => import('file://D:/theme/dplive/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getServerEntry = () => import('file://D:/theme/dplive/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
 const getSSRRenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
   if (!manifest) {
