@@ -116,11 +116,14 @@ const dkdropdownToggle = () => {
 </style>
 <style>
 .dark-mode-toggle {
+    display: flex; /* Enables Flexbox layout */
+    justify-content: center; /* Horizontally centers the span */
+    align-items: center; /* Vertically centers the span */
     transition: background-color 0.3s ease-in-out;
     border: none;
     cursor: pointer;
-    margin-top: 6px;
-    padding: 3px;
+    margin-top: 9px;
+    padding: 4px;
     border-radius: 50%;
     /* background-color: #141414; */
     margin-left: 10px;
