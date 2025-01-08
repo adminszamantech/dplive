@@ -30,7 +30,7 @@
                         </svg>
                     </NuxtLink>
                     <NuxtLink target="_blank" :to="siteSetting?.twitter">
-                        <img src="/assets/img/social/x.svg" width="28" height="28" alt="instagram" />
+                        <img src="/assets/img/social/x.png" width="28" height="28" alt="x" class="rounded-full" />
                     </NuxtLink>
                     <NuxtLink target="_blank" :to="siteSetting?.instagram">
                         <img src="/assets/img/social/instagram.png" width="28" height="28" alt="instagram" />
