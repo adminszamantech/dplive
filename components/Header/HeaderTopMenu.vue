@@ -25,10 +25,10 @@
                         ভিজ্যুয়াল মিডিয়া</NuxtLink>
                 </li>
                 <li>
-                    <button 
+                    <span 
                         @click="$emit('toggle-dark-mode')" 
                         class="dark-mode-toggle"
-                        :class="darkMode ? 'bg-black' : 'bg-gray-600'"
+                        :class="darkMode ? 'bg-black' : 'bg-blue-900'"
                         >
                         <Icon 
                             v-if="darkMode" 
@@ -40,7 +40,7 @@
                             name="material-symbols:light-mode" 
                             class="text-xl" 
                         />
-                    </button>
+                </span>
                 </li>
             </ul>
             <div @click="dkdropdownToggle"
@@ -121,7 +121,7 @@ const dkdropdownToggle = () => {
     cursor: pointer;
     margin-top: 6px;
     padding: 3px;
-    border-radius: 30%;
+    border-radius: 50%;
     /* background-color: #141414; */
     margin-left: 10px;
 }
