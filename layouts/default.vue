@@ -44,7 +44,10 @@
 
             <!-- </div> -->
         </div>
-        <MobileHeaderTop />
+        <MobileHeaderTop 
+            :darkMode="darkMode" 
+            @toggle-dark-mode="toggleDarkMode"
+        />
         <div @scroll="scrollHandler" class="main-container duration-900 mt-10 md:mt-12">
 
             <slot />
@@ -324,11 +327,12 @@ siteblockAds.value = sbAds.value
     body.dark-mode .gallery-content-except {
         background-color: #26334d !important;
     }
-    body.dark-mode #HeaderTopBar {
+    body.dark-mode #HeaderTopBar,
+    body.dark-mode #mobileTogle {
         background-color: #26334d !important;
         box-shadow: none !important;
     }
-    
+
     body.dark-mode ul li  {
         background-color: #26334d !important;
     }

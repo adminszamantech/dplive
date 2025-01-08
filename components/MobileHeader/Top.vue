@@ -7,7 +7,7 @@
                 </div>
                 <span id="realtime" class="text-xs">{{ banglaTime}}</span>
             </div>
-            <div class="flex justify-between items-center px-2">
+            <div class="flex justify-between items-center px-2" id="mobileTogle">
                 <!--<div class="flex gap-16 px-2 py-2 items-center justify-center">-->
                 <!--    <Icon v-if="!mobileMenuStatus" @click="mobileMenuToggle"-->
                 <!--        class="text-3xl cursor-pointer hover:bg-[#f7f7f7]" name="ic:outline-menu" />-->
@@ -21,18 +21,34 @@
 
 
 
-                <div class="flex gap-16 px-2 py-2 items-center justify-between relative w-full">
+                <div class="flex gap-16 px-2 py-2 items-center justify-between relative w-full" id="mobileTogle">
                     <!-- Left Icon (fixed position) -->
                     <Icon v-if="!mobileMenuStatus" @click="mobileMenuToggle"
-                            class="text-3xl cursor-pointer hover:bg-[#f7f7f7]" name="ic:outline-menu" />
+                            class="text-3xl cursor-pointer" name="ic:outline-menu" />
                     <Icon v-else name="material-symbols:close" @click="mobileMenuToggle"
-                            class="text-3xl cursor-pointer hover:bg-[#f7f7f7]" />
+                            class="text-3xl cursor-pointer"/>
 
                     <!-- Centered Logo (absolute position) -->
                     <a v-if="siteurl?.site_url" :href="website_url?.website_url" class="absolute left-1/2 transform -translate-x-1/2">
                         <nuxt-img class="mx-auto" :src="`${siteurl.site_url}/media/common/${headerSiteSettings?.logo}`"
                                 alt="Dhaka Prokash" />
                     </a>
+                    <span 
+                        @click="$emit('toggle-dark-mode')" 
+                        class="dark-mode-toggle"
+                        :class="darkMode ? 'bg-black' : 'bg-blue-900'"
+                        >
+                        <Icon 
+                            v-if="darkMode" 
+                            name="material-symbols:dark-mode" 
+                            class="text-xl text-white"
+                        />
+                        <Icon 
+                            v-else 
+                            name="material-symbols:light-mode" 
+                            class="text-xl text-white" 
+                        />
+                    </span>
                 </div>
 
 
@@ -51,6 +67,7 @@
 
 <script setup>
 import { BanglaDate, EnglishDate } from '~/lib/helpers';
+defineProps(['darkMode']);
 const website_url = websiteUrlState()
 const mobileMenuStatus = mobileMenuState()
 const mobileMenuToggle = () => {
@@ -90,3 +107,18 @@ const headerSiteSettings = sitesettingsState()
 </script>
 
 <style lang="scss" scoped></style>
+<style>
+.dark-mode-toggle {
+    display: flex; /* Enables Flexbox layout */
+    justify-content: center; /* Horizontally centers the span */
+    align-items: center; /* Vertically centers the span */
+    transition: background-color 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+    margin-top: 9px;
+    padding: 4px;
+    border-radius: 50%;
+    /* background-color: #141414; */
+    margin-left: 10px;
+}
+</style>
