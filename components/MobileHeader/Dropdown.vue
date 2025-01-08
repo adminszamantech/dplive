@@ -1,11 +1,11 @@
 <template>
     <div
-        :class="`${mobileMenuStatus ? 'left-0 fixed' : 'fixed -left-[815px]'} duration-200 bg-white max-w-full md:hidden right-0 top-12 z-[99999]`">
+        :class="`${mobileMenuStatus ? 'left-0 fixed' : 'fixed -left-[815px]'} duration-200 bg-white max-w-full md:hidden right-0 top-12 z-[99999]`" id="mobileTogle">
         <div class="px-8 pb-8 pt-16 flex flex-col gap-4  overflow-y-scroll h-screen">
             <div class="flex items-center">
-                <input type="text" placeholder="খুঁজুন" v-model="mobileMekeyword" class=" focus:outline-none border px-2 py-2 w-full">
+                <input type="text" placeholder="খুঁজুন" v-model="mobileMekeyword" class="text-black focus:outline-none border px-2 py-2 w-full">
                 <div @click="mobileSearchPageRedirect" class=" bg-gray-200 px-2 py-2  cursor-pointer">
-                    <Icon class="text-2xl " name="tabler:search" />
+                    <Icon class="text-2xl date-top-search" name="tabler:search" />
                 </div>
             </div>
             <div class="">

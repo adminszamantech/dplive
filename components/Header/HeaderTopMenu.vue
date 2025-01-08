@@ -38,9 +38,9 @@
                         <Icon 
                             v-else 
                             name="material-symbols:light-mode" 
-                            class="text-xl" 
+                            class="text-xl text-white" 
                         />
-                </span>
+                    </span>
                 </li>
             </ul>
             <div @click="dkdropdownToggle"
