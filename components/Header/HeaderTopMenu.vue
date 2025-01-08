@@ -28,7 +28,7 @@
                     <button 
                         @click="$emit('toggle-dark-mode')" 
                         class="dark-mode-toggle"
-                        :class="darkMode ? 'bg-black' : 'bg-gray-600'"
+                        :class="darkMode ? 'bg-black' : 'bg-blue-900'"
                         >
                         <Icon 
                             v-if="darkMode" 
