@@ -36,7 +36,7 @@
                         <!-- Loop Item -->
                         <NuxtLink
                             :to="getPostUrl(hpolitic?.cat_slug, hpolitic?.subcat_slug, hpolitic?.content_type, hpolitic?.content_id)"
-                            class=" border-b py-3" v-for="hpolitic in politics.slice(1, 6)" :key="hpolitic.content_id">
+                            class=" border-b py-3" v-for="hpolitic in politics.slice(1, 5)" :key="hpolitic.content_id">
                             <h4 class="text-base text-black font-semibold hover:text-[#ff0000]">{{ hpolitic.content_heading
                             }}</h4>
                         </NuxtLink>
@@ -81,7 +81,7 @@
                         <!-- Loop Item -->
                         <NuxtLink
                             :to="getPostUrl(heconmy?.cat_slug, heconmy?.subcat_slug, heconmy?.content_type, heconmy?.content_id)"
-                            class=" border-b py-3" v-for="heconmy in economycontent.slice(1, 6)" :key="heconmy.content_id">
+                            class=" border-b py-3" v-for="heconmy in economycontent.slice(1, 5)" :key="heconmy.content_id">
                             <h4 class="text-base text-black font-semibold hover:text-[#ff0000]">{{ heconmy.content_heading
                             }}</h4>
                         </NuxtLink>
@@ -128,7 +128,7 @@
                         <!-- Loop Item -->
                         <NuxtLink
                             :to="getPostUrl(hinternatcon?.cat_slug, hinternatcon?.subcat_slug, hinternatcon?.content_type, hinternatcon?.content_id)"
-                            class=" border-b py-3" v-for="hinternatcon in internationalcontent.slice(1, 6)"
+                            class=" border-b py-3" v-for="hinternatcon in internationalcontent.slice(1, 5)"
                             :key="hinternatcon.content_id">
                             <h4 class="text-base font-semibold hover:text-[#ff0000] text-black">{{
                                 hinternatcon.content_heading }}
